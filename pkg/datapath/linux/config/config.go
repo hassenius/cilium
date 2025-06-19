@@ -582,6 +582,7 @@ func (h *HeaderfileWriter) WriteNodeConfig(w io.Writer, cfg *datapath.LocalNodeC
 					ones, _ := excludeCIDR.Mask.Size()
 					cDefinesMap["IPV4_SNAT_EXCLUSION_DST_CIDR_LEN"] = fmt.Sprintf("%d", ones)
 				}
+
 			}
 			if option.Config.EnableIPv6Masquerade {
 				cDefinesMap["ENABLE_MASQUERADE_IPV6"] = "1"
@@ -601,6 +602,7 @@ func (h *HeaderfileWriter) WriteNodeConfig(w io.Writer, cfg *datapath.LocalNodeC
 					extraMacrosMap["IPV6_SNAT_EXCLUSION_DST_CIDR_MASK"] = excludeCIDR.Mask.String()
 					fw.WriteString(FmtDefineAddress("IPV6_SNAT_EXCLUSION_DST_CIDR_MASK", excludeCIDR.Mask))
 				}
+
 			}
 		}
 	}

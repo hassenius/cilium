@@ -2823,7 +2823,6 @@ func (c *DaemonConfig) Populate(logger *slog.Logger, vp *viper.Viper) {
 	}
 
 	ipv4NativeRoutingCIDR := vp.GetString(IPv4NativeRoutingCIDR)
-
 	if ipv4NativeRoutingCIDR != "" {
 		c.IPv4NativeRoutingCIDR, err = cidr.ParseCIDR(ipv4NativeRoutingCIDR)
 		if err != nil {
