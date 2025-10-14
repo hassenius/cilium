@@ -629,7 +629,7 @@ lb6_lookup_rev_nat_entry(struct __ctx_buff *ctx __maybe_unused, __u32 index)
  * @arg loopback	loopback connection
  * @arg tuple		tuple
  */
-static __always_inline int lb6_rev_nat(struct __ctx_buff *ctx, int l4_off, __u16 index,
+static __always_inline int lb6_rev_nat(struct __ctx_buff *ctx, int l4_off, __u32 index,
 				       bool loopback,
 				       struct ipv6_ct_tuple *tuple, bool has_l4_header,
 				       enum ct_dir dir)
