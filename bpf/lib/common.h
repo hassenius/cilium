@@ -792,7 +792,7 @@ struct ct_entry {
 	      reserved2:1,	/* unused since v1.14 */
 	      from_tunnel:1,	/* Connection is over tunnel */
 	      reserved3:5;
-	__u16 rev_nat_index;
+	__u32 rev_nat_index;
 	__u16 reserved4;	/* unused since v1.18 */
 
 	/* *x_flags_seen represents the OR of all TCP flags seen for the
